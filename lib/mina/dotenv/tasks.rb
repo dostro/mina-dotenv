@@ -6,11 +6,11 @@ namespace :dotenv do
   desc 'Copies the local .env file to the server'
   task :push do
     dotenv = Mina::Dotenv::Utils.read_file(dotenv_location)
-    command! %(
+    command %(
       echo #{dotenv.shellescape} | sed -e 's/^[ \t]*//' > #{remote_dotenv_path}
     )
-    command! %(rm -f .env)
-    command! %(ln -nFs #{remote_dotenv_path} .env)
+    command %(rm -f .env)
+    command %(ln -nFs #{remote_dotenv_path} .env)
   end
 
   desc 'Copies the remote .env file to the current directory'
