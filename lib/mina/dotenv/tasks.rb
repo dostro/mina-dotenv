@@ -1,3 +1,4 @@
+require 'rake'
 require 'mina/dotenv/utils'
 require 'mina/scp'
 
