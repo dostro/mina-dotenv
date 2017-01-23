@@ -1,3 +1,4 @@
+require 'mina'
 require 'mina/dotenv/utils'
 require 'mina/scp'
 
