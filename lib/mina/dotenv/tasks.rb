@@ -1,7 +1,8 @@
 require 'mina/dotenv/utils'
 require 'mina/scp'
-
-dotenv_location = '.env'
+require 'mina/rails'
+require 'mina/git'
+require 'mina/rvm'
 
 namespace :dotenv do
   desc 'Copies the local .env file to the server'
