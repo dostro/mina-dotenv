@@ -1,6 +1,8 @@
 require 'mina/dotenv/utils'
 require 'mina/scp'
 
+set_default :dotenv_location, '.env'
+
 namespace :dotenv do
   desc 'Copies the local .env file to the server'
   task :push do
